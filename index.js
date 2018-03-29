@@ -4,16 +4,16 @@ var bitcore = module.exports;
 
 // module information
 bitcore.version = 'v' + require('./package.json').version;
-bitcore.versionGuard = function(version) {
-  if (version !== undefined) {
-    var message = 'More than one instance of qtumcore-lib found. ' +
-      'Please make sure to require qtumcore-lib and check that submodules do' +
-      ' not also include their own qtumcore-lib dependency.';
-    console.log(message);
-  }
-};
-bitcore.versionGuard(global._qtumcore);
-global._qtumcore = bitcore.version;
+// bitcore.versionGuard = function(version) {
+//   if (version !== undefined) {
+//     var message = 'More than one instance of qtumcore-lib found. ' +
+//       'Please make sure to require qtumcore-lib and check that submodules do' +
+//       ' not also include their own qtumcore-lib dependency.';
+//     console.log(message);
+//   }
+// };
+// bitcore.versionGuard(global._qtumcore);
+// global._qtumcore = bitcore.version;
 
 // crypto
 bitcore.crypto = {};
